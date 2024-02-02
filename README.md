@@ -13,6 +13,9 @@
 * ロゴを短くタップ：メッセージ送信(空)
 * ロゴを長くタップ：送信メッセージ復元(送信メッセージ確認)
 
+## Lite版はこっち↓
+(https://github.com/KAKURITU-P/microbit-chat-ja?tab=readme-ov-file)
+
 ## 拡張機能として使用
 
 このリポジトリは、MakeCode で **拡張機能** として追加できるらしい。
