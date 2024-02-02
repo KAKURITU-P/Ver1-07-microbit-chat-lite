@@ -14,7 +14,7 @@
 * ロゴを長くタップ：送信メッセージ復元(送信メッセージ確認)
 
 ## 通常版はこっち↓
-(https://github.com/KAKURITU-P/microbit-chat-ja?tab=readme-ov-file)
+[通常版](https://github.com/KAKURITU-P/microbit-chat-ja?tab=readme-ov-file)
 
 ## 拡張機能として使用
 
