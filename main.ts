@@ -11,6 +11,8 @@ input.onPinPressed(TouchPin.P0, function () {
         . . . . .
         # . . . .
         `)
+    basic.clearScreen()
+    katakana.showString("ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｯｬｭｮｧｨｩｪｫ!?_-｡､ﾞﾟ".substr(文字セレクター, 1))
 })
 // 右：メッセージリカバリー
 // 左：送信文字確認
@@ -83,6 +85,8 @@ input.onPinPressed(TouchPin.P2, function () {
         . . . . .
         . . . . #
         `)
+    basic.clearScreen()
+    katakana.showString("ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｯｬｭｮｧｨｩｪｫ!?_-｡､ﾞﾟ".substr(文字セレクター, 1))
 })
 // メッセージ保存
 // メッセージ暗号化
@@ -152,6 +156,8 @@ input.onPinPressed(TouchPin.P1, function () {
         . . . . .
         . . # . .
         `)
+    basic.clearScreen()
+    katakana.showString("ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｯｬｭｮｧｨｩｪｫ!?_-｡､ﾞﾟ".substr(文字セレクター, 1))
 })
 // メッセージ送信
 // メッセージバックアップ
