@@ -93,13 +93,13 @@ input.onPinPressed(TouchPin.P2, function () {
 input.onButtonPressed(Button.AB, function () {
     if (1 == 互換モード) {
         送信用文字_メモリ = "" + 送信用文字 + "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghij\\k\\lmnopqr\\\\stuvw\\xyz1234567890!".substr(文字セレクター, 1)
-        カナ文字_メモリ = "" + カナ文字 + "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｯｬｭｮｧｨｩｪｫ!?_-｡､ﾞﾟ".substr(文字セレクター, 1)
+        カナ文字_メモリ = "" + カナ文字 + "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔ/ﾕ/ﾖﾗﾘﾙﾚﾛﾜ//ｦﾝｯｬｭ/ｮｧｨｩｪｫ!?_-｡､ﾞﾟ".substr(文字セレクター, 1)
         送信用文字_取り消し時バックアップ = 送信用文字
         カナ文字_取り消し時バックアップ = カナ文字
         送信用文字 = 送信用文字_メモリ
         カナ文字 = カナ文字_メモリ
     } else {
-        if (互換モード == 66 && カナ文字.length == 0) {
+        if (文字セレクター == 66 && カナ文字.length == 0) {
             basic.clearScreen()
             katakana.setScrollTime(50)
             katakana.showString("ｺﾞｶﾝ")
@@ -107,8 +107,8 @@ input.onButtonPressed(Button.AB, function () {
             basic.clearScreen()
             互換モード = 1
         } else {
-            送信用文字_メモリ = "" + 送信用文字 + "a/i/u/e/o/kakikukekosasisusesotatitutetonaninunenohahihuhehomamimumemoya//yu//yorarirurerowa////wonnttlsld//lflalilulelo/!/?/_/-/A/B/C/D".substr(文字セレクター * 2, 2)
-            カナ文字_メモリ = "" + カナ文字 + "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｯｬｭｮｧｨｩｪｫ!?_-｡､ﾞﾟ".substr(文字セレクター, 1)
+            送信用文字_メモリ = "" + 送信用文字 + "a/i/u/e/o/kakikukekosasisusesotatitutetonaninunenohahihuhehomamimumemoya//yu//yorarirurerowa////wonnttlsld//lflalilulelo!/?/A/B/C/D/E/F/".substr(文字セレクター * 2, 2)
+            カナ文字_メモリ = "" + カナ文字 + "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔ/ﾕ/ﾖﾗﾘﾙﾚﾛﾜ//ｦﾝｯｬｭ/ｮｧｨｩｪｫ!?_-｡､ﾞﾟ".substr(文字セレクター, 1)
             送信用文字_取り消し時バックアップ = 送信用文字
             カナ文字_取り消し時バックアップ = カナ文字
             送信用文字 = 送信用文字_メモリ
@@ -125,8 +125,8 @@ radio.onReceivedString(function (receivedString) {
     if (receivedString.substr(0, 2) == "##") {
         受信文字数カウンター = 1
         while (receivedString.length / 2 > 受信文字数カウンター) {
-            復号化用カウンター = "a/i/u/e/o/kakikukekosasisusesotatitutetonaninunenohahihuhehomamimumemoya//yu//yorarirurerowa////wonnttlsld//lflalilulelo/!/?/_/-/A/B/C/D".indexOf(receivedString.substr(受信文字数カウンター * 2, 2))
-            カナ文字_受信時 = "" + カナ文字_受信時メモリ + "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｯｬｭｮｧｨｩｪｫ!?_-｡､ﾞﾟ".charAt(復号化用カウンター / 2)
+            復号化用カウンター = "a/i/u/e/o/kakikukekosasisusesotatitutetonaninunenohahihuhehomamimumemoya//yu//yorarirurerowa////wonnttlsld//lflalilulelo!/?/A/B/C/D/E/F/".indexOf(receivedString.substr(受信文字数カウンター * 2, 2))
+            カナ文字_受信時 = "" + カナ文字_受信時メモリ + "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔ/ﾕ/ﾖﾗﾘﾙﾚﾛﾜ//ｦﾝｯｬｭ/ｮｧｨｩｪｫ!?_-｡､ﾞﾟ".charAt(復号化用カウンター / 2)
             カナ文字_受信時メモリ = カナ文字_受信時
             受信文字数カウンター += 1
         }
@@ -202,6 +202,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     カナ文字_メモリ = ""
     送信用文字 = ""
     送信済 = 1
+    互換モード = 0
 })
 // 初期設定(リセット)
 let 復号化用カウンター = 0
