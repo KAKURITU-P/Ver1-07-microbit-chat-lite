@@ -107,7 +107,7 @@ input.onButtonPressed(Button.AB, function () {
             basic.clearScreen()
             互換モード = 1
         } else {
-            送信用文字_メモリ = "" + 送信用文字 + "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghij\\k\\lmnopqr\\\\stuvw\\xyz1234567890!".substr(文字セレクター * 2, 2)
+            送信用文字_メモリ = "" + 送信用文字 + "a/i/u/e/o/kakikukekosasisusesotatitutetonaninunenohahihuhehomamimumemoya//yu//yorarirurerowa////wonnttlsld//lflalilulelo/!/?/_/-/A/B/C/D".substr(文字セレクター * 2, 2)
             カナ文字_メモリ = "" + カナ文字 + "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｯｬｭｮｧｨｩｪｫ!?_-｡､ﾞﾟ".substr(文字セレクター, 1)
             送信用文字_取り消し時バックアップ = 送信用文字
             カナ文字_取り消し時バックアップ = カナ文字
@@ -125,7 +125,7 @@ radio.onReceivedString(function (receivedString) {
     if (receivedString.substr(0, 2) == "##") {
         受信文字数カウンター = 1
         while (receivedString.length / 2 > 受信文字数カウンター) {
-            復号化用カウンター = "a/i/u/e/o/kakikukekosasisusesotatitutetonaninunenohahihuhehomamimumemoya\\\\yu\\\\yorarirurerowa\\\\\\\\wonnttlsld\\\\lflalilulelo\\!\\?\\_\\-\\A\\B\\C\\D".indexOf(receivedString.substr(受信文字数カウンター * 2, 2))
+            復号化用カウンター = "a/i/u/e/o/kakikukekosasisusesotatitutetonaninunenohahihuhehomamimumemoya//yu//yorarirurerowa////wonnttlsld//lflalilulelo/!/?/_/-/A/B/C/D".indexOf(receivedString.substr(受信文字数カウンター * 2, 2))
             カナ文字_受信時 = "" + カナ文字_受信時メモリ + "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｯｬｭｮｧｨｩｪｫ!?_-｡､ﾞﾟ".charAt(復号化用カウンター / 2)
             カナ文字_受信時メモリ = カナ文字_受信時
             受信文字数カウンター += 1
